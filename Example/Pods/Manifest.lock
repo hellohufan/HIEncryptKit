@@ -1,0 +1,31 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - HIEncryptKit (0.1.0)
+  - Kiwi (3.0.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - HIEncryptKit (from `../`)
+  - Kiwi
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+    - Kiwi
+
+EXTERNAL SOURCES:
+  HIEncryptKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  HIEncryptKit: d94e1582a04cf661d7a5c7bbd3d44f82901555d4
+  Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
+
+PODFILE CHECKSUM: bfd6a872eb6360141600e496b330b27496c84be4
+
+COCOAPODS: 1.9.1

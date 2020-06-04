@@ -1,0 +1,6 @@
+framework module HIEncryptKit {
+  umbrella header "HIEncryptKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
