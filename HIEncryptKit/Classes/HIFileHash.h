@@ -2,8 +2,8 @@
 //  HIFileHash.h
 //  HIKit <https://github.com/hellohufan/HIEncryptKit>
 //
-//  Created by ibireme on 14/11/2.
-//  Copyright (c) 2015 ibireme.
+//  Created by IVAN on 14/11/2.
+//  Copyright (c) 2015 IVAN.
 //
 //  This source code is licensed under the MIT-style license found in the
 //  LICENSE file in the root directory of this source tree.
@@ -15,25 +15,25 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// File hash algorithm type
 typedef NS_OPTIONS (NSUInteger, HIFileHashType) {
-    YYFileHashTypeMD2     = 1 << 0, ///< MD2 hash
-    YYFileHashTypeMD4     = 1 << 1, ///< MD4 hash
-    YYFileHashTypeMD5     = 1 << 2, ///< MD5 hash
-    YYFileHashTypeSHA1    = 1 << 3, ///< SHA1 hash
-    YYFileHashTypeSHA224  = 1 << 4, ///< SHA224 hash
-    YYFileHashTypeSHA256  = 1 << 5, ///< SHA256 hash
-    YYFileHashTypeSHA384  = 1 << 6, ///< SHA384 hash
-    YYFileHashTypeSHA512  = 1 << 7, ///< SHA512 hash
-    YYFileHashTypeCRC32   = 1 << 8, ///< crc32 checksum
-    YYFileHashTypeAdler32 = 1 << 9, ///< adler32 checksum
+    HIFileHashTypeMD2     = 1 << 0, ///< MD2 hash
+    HIFileHashTypeMD4     = 1 << 1, ///< MD4 hash
+    HIFileHashTypeMD5     = 1 << 2, ///< MD5 hash
+    HIFileHashTypeSHA1    = 1 << 3, ///< SHA1 hash
+    HIFileHashTypeSHA224  = 1 << 4, ///< SHA224 hash
+    HIFileHashTypeSHA256  = 1 << 5, ///< SHA256 hash
+    HIFileHashTypeSHA384  = 1 << 6, ///< SHA384 hash
+    HIFileHashTypeSHA512  = 1 << 7, ///< SHA512 hash
+    HIFileHashTypeCRC32   = 1 << 8, ///< crc32 checksum
+    HIFileHashTypeAdler32 = 1 << 9, ///< adler32 checksum
 };
 
 /**
  Utility for computing hashes of file with high performance and low memory usage.
- See `YYFileHashType` for all supported hash (checksum) type.
+ See `HIFileHashType` for all supported hash (checksum) type.
  
  Sample Code:
  
-     YYFileHash *hash = [YYFileHash hashForFile:@"/tmp/Xcode6.dmg" types:YYFileHashTypeMD5 | YYFileHashTypeSHA1];
+     HIFileHash *hash = [HIFileHash hashForFile:@"/tmp/Xcode6.dmg" types:HIFileHashTypeMD5 | HIFileHashTypeSHA1];
      NSLog(@"md5:%@ sha1:%@", hash.md5String, hash.sha1String);
  
  */

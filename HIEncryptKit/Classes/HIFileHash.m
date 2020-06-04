@@ -1,9 +1,9 @@
 //
-//  YYFileHash.m
-//  YYKit <https://github.com/ibireme/YYKit>
+//  HIFileHash.m
+//  HIKit <https://github.com/hellohufan/HIEncryptKit>
 //
-//  Created by ibireme on 14/11/2.
-//  Copyright (c) 2015 ibireme.
+//  Created by IVAN on 14/11/2.
+//  Copyright (c) 2015 IVAN.
 //
 //  This source code is licensed under the MIT-style license found in the
 //  LICENSE file in the root directory of this source tree.
@@ -65,43 +65,43 @@ ctx_final[ctx_index] = (int (*)(unsigned char *, void *))Final; \
 digist_length[ctx_index] = Length;
     
     int ctx_index = 0;
-    if (types & YYFileHashTypeMD2) {
+    if (types & HIFileHashTypeMD2) {
         init_hash(CC_MD2_CTX, CC_MD2_Init, CC_MD2_Update, CC_MD2_Final, CC_MD2_DIGEST_LENGTH);
     }
     ctx_index++;
-    if (types & YYFileHashTypeMD4) {
+    if (types & HIFileHashTypeMD4) {
         init_hash(CC_MD4_CTX, CC_MD4_Init, CC_MD4_Update, CC_MD4_Final, CC_MD4_DIGEST_LENGTH);
     }
     ctx_index++;
-    if (types & YYFileHashTypeMD5) {
+    if (types & HIFileHashTypeMD5) {
         init_hash(CC_MD5_CTX, CC_MD5_Init, CC_MD5_Update, CC_MD5_Final, CC_MD5_DIGEST_LENGTH);
     }
     ctx_index++;
-    if (types & YYFileHashTypeSHA1) {
+    if (types & HIFileHashTypeSHA1) {
         init_hash(CC_SHA1_CTX, CC_SHA1_Init, CC_SHA1_Update, CC_SHA1_Final, CC_SHA1_DIGEST_LENGTH);
     }
     ctx_index++;
-    if (types & YYFileHashTypeSHA224) {
+    if (types & HIFileHashTypeSHA224) {
         init_hash(CC_SHA256_CTX, CC_SHA224_Init, CC_SHA224_Update, CC_SHA224_Final, CC_SHA224_DIGEST_LENGTH);
     }
     ctx_index++;
-    if (types & YYFileHashTypeSHA256) {
+    if (types & HIFileHashTypeSHA256) {
         init_hash(CC_SHA256_CTX, CC_SHA256_Init, CC_SHA256_Update, CC_SHA256_Final, CC_SHA256_DIGEST_LENGTH);
     }
     ctx_index++;
-    if (types & YYFileHashTypeSHA384) {
+    if (types & HIFileHashTypeSHA384) {
         init_hash(CC_SHA512_CTX, CC_SHA384_Init, CC_SHA384_Update, CC_SHA384_Final, CC_SHA384_DIGEST_LENGTH);
     }
     ctx_index++;
-    if (types & YYFileHashTypeSHA512) {
+    if (types & HIFileHashTypeSHA512) {
         init_hash(CC_SHA512_CTX, CC_SHA512_Init, CC_SHA512_Update, CC_SHA512_Final, CC_SHA512_DIGEST_LENGTH);
     }
     ctx_index++;
-    if (types & YYFileHashTypeCRC32) {
+    if (types & HIFileHashTypeCRC32) {
         init_hash(uLong, crc32_init, crc32_update, crc32_final, sizeof(uint32_t));
     }
     ctx_index++;
-    if (types & YYFileHashTypeAdler32) {
+    if (types & HIFileHashTypeAdler32) {
         init_hash(uLong, adler32_init, adler32_update, adler32_final, sizeof(uint32_t));
     }
     
@@ -185,44 +185,44 @@ digist_length[ctx_index] = Length;
                     [str appendFormat:@"%02x", bytes[d]];
                 }
                 switch (type) {
-                    case YYFileHashTypeMD2: {
+                    case HIFileHashTypeMD2: {
                         hash->_md2Data = data;
                         hash->_md2String = str;
                     } break;
-                    case YYFileHashTypeMD4: {
+                    case HIFileHashTypeMD4: {
                         hash->_md4Data = data;
                         hash->_md4String = str;
                     } break;
-                    case YYFileHashTypeMD5: {
+                    case HIFileHashTypeMD5: {
                         hash->_md5Data = data;
                         hash->_md5String = str;
                     } break;
-                    case YYFileHashTypeSHA1: {
+                    case HIFileHashTypeSHA1: {
                         hash->_sha1Data = data;
                         hash->_sha1String = str;
                     } break;
-                    case YYFileHashTypeSHA224: {
+                    case HIFileHashTypeSHA224: {
                         hash->_sha224Data = data;
                         hash->_sha224String = str;
                     } break;
-                    case YYFileHashTypeSHA256: {
+                    case HIFileHashTypeSHA256: {
                         hash->_sha256Data = data;
                         hash->_sha256String = str;
                     } break;
-                    case YYFileHashTypeSHA384: {
+                    case HIFileHashTypeSHA384: {
                         hash->_sha384Data = data;
                         hash->_sha384String = str;
                     } break;
-                    case YYFileHashTypeSHA512: {
+                    case HIFileHashTypeSHA512: {
                         hash->_sha512Data = data;
                         hash->_sha512String = str;
                     } break;
-                    case YYFileHashTypeCRC32: {
+                    case HIFileHashTypeCRC32: {
                         uint32_t hash32 = *((uint32_t *)bytes);
                         hash->_crc32 = hash32;
                         hash->_crc32String = [NSString stringWithFormat:@"%08x", hash32];
                     } break;
-                    case YYFileHashTypeAdler32: {
+                    case HIFileHashTypeAdler32: {
                         uint32_t hash32 = *((uint32_t *)bytes);
                         hash->_adler32 = hash32;
                         hash->_adler32String = [NSString stringWithFormat:@"%08x", hash32];

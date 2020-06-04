@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		0E862E68F8C2AAA0ECB420AF /* Pods-HIEncryptKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIEncryptKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-HIEncryptKit_Example/Pods-HIEncryptKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		11AD0061FF65159DAFE33780 /* HIEncryptKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = HIEncryptKit.podspec; path = ../HIEncryptKit.podspec; sourceTree = "<group>"; };
+		11AD0061FF65159DAFE33780 /* HIEncryptKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HIEncryptKit.podspec; path = ../HIEncryptKit.podspec; sourceTree = "<group>"; };
 		205B5F2778E63E4A549BA46A /* Pods-HIEncryptKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIEncryptKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-HIEncryptKit_Tests/Pods-HIEncryptKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		30B9C8E9E35C97E90322FEF9 /* Pods_HIEncryptKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIEncryptKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4302C01A0D26DCC02E5B6FB8 /* Pods_HIEncryptKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIEncryptKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,9 +64,9 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81E8B29F56933DD82D3A85F8 /* Pods-HIEncryptKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIEncryptKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-HIEncryptKit_Tests/Pods-HIEncryptKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E63B5996A411CD2D07778C54 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E63B5996A411CD2D07778C54 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		EA6E5D928456159B83988A64 /* Pods-HIEncryptKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIEncryptKit_Example.release.xcconfig"; path = "Target Support Files/Pods-HIEncryptKit_Example/Pods-HIEncryptKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F3775FD02F469BD6E8CD0B6E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F3775FD02F469BD6E8CD0B6E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				205B5F2778E63E4A549BA46A /* Pods-HIEncryptKit_Tests.debug.xcconfig */,
 				81E8B29F56933DD82D3A85F8 /* Pods-HIEncryptKit_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -249,6 +248,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = hellohufan;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = L3N52HAY5N;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -259,6 +261,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -515,11 +518,12 @@
 			baseConfigurationReference = 0E862E68F8C2AAA0ECB420AF /* Pods-HIEncryptKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L3N52HAY5N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HIEncryptKit/HIEncryptKit-Prefix.pch";
 				INFOPLIST_FILE = "HIEncryptKit/HIEncryptKit-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fjsj.HIEncryptKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
@@ -531,11 +535,12 @@
 			baseConfigurationReference = EA6E5D928456159B83988A64 /* Pods-HIEncryptKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L3N52HAY5N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HIEncryptKit/HIEncryptKit-Prefix.pch";
 				INFOPLIST_FILE = "HIEncryptKit/HIEncryptKit-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fjsj.HIEncryptKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
