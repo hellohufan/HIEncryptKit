@@ -1,0 +1,14 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'HIEncryptKit_Example' do
+  pod 'HIEncryptKit', :path => '../'
+
+  target 'HIEncryptKit_Tests' do
+    inherit! :search_paths
+
+    pod 'Kiwi'
+    pod 'FBSnapshotTestCase'
+  end
+end
